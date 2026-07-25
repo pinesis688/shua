@@ -681,7 +681,7 @@
   }
 
   function handleRestart() {
-    if (_destroyed) return;
+    if (_destroyed || !targetEl) return;
     var overlay = targetEl.querySelector('#dbStopOverlay');
     if (overlay) overlay.remove();
     resetState();
